@@ -74,12 +74,13 @@ class XHSClient:
         Returns:
 
         """
+        
         # return response.text
         return_response = kwargs.pop('return_response', False)
 
         async with httpx.AsyncClient(proxies=self.proxies) as client:
             response = await client.request(
-                method, url, timeout=self.timeout,
+                method, url,timeout=self.timeout,
                 **kwargs
             )
         
@@ -194,8 +195,11 @@ class XHSClient:
         Returns:
             {"creator":{}, "notes":[]}
         """
+        headers = {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+        }
         path = '/user/profile/'+creator
-        content = await self.request(method="GET", url=f"https://www.xiaohongshu.com{path}", return_response=True)
+        content = await self.request(method="GET", url=f"https://www.xiaohongshu.com{path}", headers=headers,return_response=True)
         match = re.search(r'<script>window.__INITIAL_STATE__=(.+)<\/script>', content, re.M)
 
         if match == None:

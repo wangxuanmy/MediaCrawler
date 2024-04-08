@@ -1,6 +1,6 @@
 # 基础配置
 PLATFORM = "xhs"
-KEYWORDS = "python,golang"
+KEYWORDS = "劳动法,竞业"
 LOGIN_TYPE = "qrcode"  # qrcode or phone or cookie
 COOKIES = ""
 SORT_TYPE="popularity_descending" # 具体值参见media_platform.xxx.field下的枚举值，展示只支持小红书
@@ -25,7 +25,7 @@ SAVE_DATA_OPTION = "json" # csv or db or json
 USER_DATA_DIR = "%s_user_data_dir"  # %s will be replaced by platform name
 
 # 爬取视频/帖子的数量控制
-CRAWLER_MAX_NOTES_COUNT = 20
+CRAWLER_MAX_NOTES_COUNT = 40
 
 # 并发爬虫数量控制
 MAX_CONCURRENCY_NUM = 4
@@ -39,9 +39,7 @@ COMMENT_KEYWORDS = [
 
 # 指定小红书需要爬虫的笔记ID列表
 XHS_SPECIFIED_ID_LIST = [
-    "6422c2750000000027000d88",
-    "64ca1b73000000000b028dd2",
-    "630d5b85000000001203ab41",
+    "65c5f935000000002d003c7f",
     # ........................
 ]
 
@@ -74,8 +72,8 @@ WEIBO_SPECIFIED_ID_LIST = [
 
 # 指定小红书创作者ID列表
 XHS_CREATOR_ID_LIST = [
-    "59d8cb33de5fb4696bf17217",
-    "61b87386000000001000b18b",
-    "5e8558100000000001005bc5",
+    "6520b2b2000000002401728e",
+    "5ca831f400000000120262c6",
+    "64a3b48f000000001f006db4",
     # ........................
 ]
